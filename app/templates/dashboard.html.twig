@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <style>
+            body {
+                background: #96b0bc;
+            }
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 25px;
+            }
+            .main-wrapper {
+                position: absolute;
+                top: 35%;
+                left: 37%;
+                margin-top: -50px;
+                margin-left: -50px;
+                width: 290px;
+                height: 230px;
+                border: 1px solid black;
+                padding: 50px;
+                background: white;
+            }
+            #rate > div {
+                padding: 20px 0 10px 0;
+            }
+            input {
+                float: right;
+            }
+            button {
+                display: inline-block;
+                padding: 0.35em 1.2em;
+                border: 0.1em solid #FFFFFF;
+                background-color: #4CAF50;
+                margin: 0 0.3em 0.3em 0;
+                border-radius: 0.12em;
+                box-sizing: border-box;
+                text-decoration: none;
+                font-family: 'Roboto',sans-serif;
+                font-weight: 300;
+                text-align: center;
+                font-size: 25px;
+                transition: all 0.2s;
+                cursor: pointer;
+            }
+            button:hover {
+                color:#000000;
+                background-color:#e7e7e7;
+            }
+        </style>
+    {% endblock %}
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <h1>Exchange Rate</h1>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+
+</body>
+</html>
