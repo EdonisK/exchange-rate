@@ -16,3 +16,11 @@ composer install
 symfony console doctrine:migration:migrate
 
 ```
+
+
+## Usage
+Access the endpoint via GET
+
+http://localhost:8080/api/getExchangeRate?from=USD&to=EUR
+
+GUI: http://localhost:8080
